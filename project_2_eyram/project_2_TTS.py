@@ -31,13 +31,14 @@ while True:
     if event == "Speak":
         if values['female']:
             engine.setProperty('voice', voices[1].id)
+        if values['male']:
+            engine.setProperty('voice', voices[0].id)
         engine.say(values['Text'])
     engine.runAndWait()
     # End program if user closes window or
     # presses the OK button
     if event == "OK" or event == sg.WIN_CLOSED:
         break
-
 
 # for voice in voices:
 #
